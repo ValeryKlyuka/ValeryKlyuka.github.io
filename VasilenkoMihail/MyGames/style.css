@@ -1,0 +1,241 @@
+header {
+    background-color: blue;
+    width: 98vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 2px #222;
+    position: fixed;
+    left: 1vw;
+    right: 1vw;
+    top: -10px;
+}
+.content {
+    display: flex;
+    flex-direction:column ;
+    height: 300vh;
+    margin-top:90px;
+    justify-content: space-around;
+    align-items: center;
+    background: url('images/fon.jpg');
+    
+}
+.history, .credits {
+    background-color: rgb(28, 223, 158);
+    display: flex;
+    font-size: large;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+        
+}
+.games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+}
+.game1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.game2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.game3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.game4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+.RandNum  input, .RandNuminfo input{
+    width: 256px;
+    height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+}
+#randIn, #randAnswer {
+    visibility: hidden;
+}
+.RandNum {
+    max-width: 352px;
+    min-width: 352px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.RandNuminfo p, .Pixelgameinfo p, .tictacinfo p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    margin-left: 15px;
+}
+.RandNuminfo h2, .Pixelgameinfo h2, .tictacinfo h2{
+    margin-top: -22px;
+    margin-left: 16px;
+}
+.RandNuminfo, .Pixelgameinfo, .tictacinfo{
+    width: 600px;
+    max-width: 600px;
+    margin-left: 20px;
+  }
+.RandNuminfo input, .Pixelgameinfo input, .tictacinfo input{
+    width: 256px;
+    height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+}
+.RandNum  input[type='text'] {
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+.tictac {
+    display: flex;
+    width: 352px;
+    height: 352px;
+    min-width: 352px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.cell {
+    height: 110px;
+    width: 110px;
+    margin: -6px;
+    border-radius: 5px;
+    border-style: solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 54pt;
+}
+footer{
+    position: fixed;
+    width: 98vw;
+    height: 80px;
+    bottom: -10px;
+    left: 1vw;
+    right: 1vw;
+    padding-bottom: 10px;
+    background-color:#bf2a4f ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 2px #222;
+}
+footer p {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    flex-grow: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo {
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 20%;
+    min-width: 180px;
+ 
+}
+.menu {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    flex-grow: 1;
+
+}
+.social{
+    /*Коментарий*/
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+.logo p img {
+    height: 60px;
+}
+.logo p { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.menu p a, footer p a, .logo p a {
+    color: #222;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+}
+.menu p a:hover, footer p a:hover {
+    color: white;
+    background-color: #222;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+}
+
+.menu p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.social p img {
+    height: 38px;
+    margin: 10px;
+}
+button {
+    height: 20px;
+    width: 20px;
+    margin: 1px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 4px;
+}
+.Pixelgame {
+height: 352px;
+max-width: 352px;
+min-width: 352px;
+}
+.gamesmenu {
+    display: flex;
+    width: 972px;
+    justify-content: space-between;
+}
+.gamesmenu input {
+    width: 23%;
+    height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    margin-top: 80px;
+}
+.dinoinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 200px;
+    width: 972px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
