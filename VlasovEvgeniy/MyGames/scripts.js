@@ -41,7 +41,7 @@ function beginRandNumb() {
 }
 function answerRandNumb() {
   tryes++; 
-  if(randIn.value > 0 && randIn.value<101){
+  if(randIn.value > 0 && randIn.value<1001){
   if(randIn.value > randnumb){
     randOut.value ="Мое число меньше. Попыток: " + tryes;
   }else if (randIn.value < randnumb){
