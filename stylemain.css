@@ -9,6 +9,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 .header h3 {
     margin-top: -20px;
