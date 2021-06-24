@@ -233,7 +233,7 @@ button {
     flex-direction: column;
     justify-content: flex-end;
     width: 972px;
-    height: 100px;
+    height: 200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12pt;
 }
