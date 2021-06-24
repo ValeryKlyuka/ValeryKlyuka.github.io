@@ -25,13 +25,14 @@ body {
     height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    overflow-x: auto;
+    padding: 20px 0;
 }
 .container {
     position: relative;
     margin: 20px;
   }
-  
+
   .container .card {
     position: relative;
     width: 280px;
@@ -40,7 +41,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
   }
-  
+
   .container .card::before {
     content: '';
     position: absolute;
@@ -52,11 +53,11 @@ body {
     clip-path: circle(150px at 80% 20%);
     transition: 0.5s ease-out;
   }
-  
+
   .container .card:hover::before {
     clip-path: circle(300px at 80% -20%);
   }
-  
+
   .container .card::after {
     content: 'Games';
     position: absolute;
@@ -67,7 +68,7 @@ body {
     font-style: italic;
     color: rgba(255, 255, 255, 0.04);
   }
-  
+
   .container .card .imgBx {
     position: absolute;
     top: 50%;
@@ -77,12 +78,12 @@ body {
     height: 220px;
     transition: 0.5s;
   }
-  
+
   .container .card:hover .imgBx {
     top: 0;
     transform: translateY(0);
   }
-  
+
   .container .card img {
     position: absolute;
     top: 40%;
@@ -90,7 +91,7 @@ body {
     transform: translate(-50%, -50%) rotate(-25deg);
     width: 160px;
   }
-  
+
   .container .card .contentBx {
     position: absolute;
     bottom: 0;
@@ -100,19 +101,19 @@ body {
     transition: 1s;
     z-index: 10;
   }
-  
+
   .container .card:hover .contentBx {
     height: 160px;
   }
-  
+
   .container .card .contentBx h2 {
     position: relative;
     font-weight: 300;
     letter-spacing: 1px;
     color: #ffffff;
   }
-  
-  
+
+
   .container .card .contentBx .size,
   .container .card .contentBx .color {
     display: flex;
@@ -123,7 +124,7 @@ body {
     opacity: 0;
     visibility: hidden;
   }
-  
+
   .container .card:hover .contentBx .size {
     opacity: 1;
     visibility: visible;
@@ -134,7 +135,7 @@ body {
     visibility: visible;
     transition-delay: 0.6s;
   }
-  
+
   .container .card .contentBx .size h3,
   .container .card .contentBx .color h3 {
     color: #ffffff;
@@ -144,7 +145,7 @@ body {
     letter-spacing: 2px;
     margin-right: 10px;
   }
-  
+
   .container .card .contentBx .size span {
     width: 26px;
     height: 26px;
@@ -159,11 +160,11 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
-  
+
   .container .card .contentBx .size span:hover {
     background: #9bdc28;
   }
-  
+
   .container .card .contentBx .color span {
     width: 20px;
     height: 20px;
@@ -172,19 +173,19 @@ body {
     margin: 0 0px;
     cursor: pointer;
   }
-  
+
   .container .card .contentBx .color span:nth-child(2) {
     background: #9bdc28;
   }
-  
+
   .container .card .contentBx .color span:nth-child(3) {
     background: #03a9f4;
   }
-  
+
   .container .card .contentBx .color span:nth-child(4) {
     background: #e91e63;
   }
-  
+
   .container .card .contentBx a {
     display: inline-block;
     padding: 10px 20px;
@@ -198,7 +199,7 @@ body {
     transform: translateY(50px);
     transition: 0.5s;
   }
-  
+
   .container .card:hover .contentBx a {
     opacity: 1;
     transform: translateY(0);
