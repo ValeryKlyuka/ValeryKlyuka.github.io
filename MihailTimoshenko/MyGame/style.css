@@ -154,7 +154,7 @@ height: 500px;
 }
 
 .game4 {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 972px;
     align-items: center;
