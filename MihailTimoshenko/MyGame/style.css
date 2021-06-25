@@ -1,0 +1,351 @@
+header {
+background-color: burlywood;
+height: 95px;
+
+left:1vw;
+right: 1vw;
+top: -10px;
+display: flex;
+align-items: center;
+justify-content:left;
+border-radius: 10px;
+box-shadow: 0px 2px 10px 4px #222;
+position: fixed;
+z-index: 1;
+padding-top: 10px;
+
+}
+
+.logo {
+background-color: rgb(0, 133, 133);
+height: 80%;
+width: 20%;
+min-width: 160px;
+max-width: 250px;
+display: flex;
+align-items: center;
+justify-self: left;
+margin-left: 10px;
+border-radius: 10px;
+}
+
+.logo p img {
+
+    height: 60px;
+}
+.logo p {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: large;
+font-weight: 700;
+margin-left: 20px;
+
+
+}
+
+.menu {
+display: flex;
+align-items: center;
+height: 50%;
+margin-left: 20px;
+flex-grow: 1;
+
+}
+
+.social {
+display: flex;
+align-items: center;
+height: 80%;
+
+}
+
+.menu p a, footer p a {
+color: rgb(29, 0, 160);
+text-decoration: none;
+transition: all 0.25s ease-in ;
+
+}
+.menu p a:hover, footer p a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 133, 133) ;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.25s ease-out ;
+}
+.menu p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: 450;
+    margin-left: 20px;
+}
+.social p img {
+    height: 50px;
+    margin-right: 60px;
+}
+
+.content {
+    background: url(images/named.png);
+height: 300vh;
+margin-top: 95px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+margin-left: 0.5vw ;
+margin-right: 0.5vw;
+}
+
+.history {
+
+display: flex;
+flex-direction: column;
+width: 80%;
+height: 100vh;
+align-items: center;
+justify-content: space-around;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: medium;
+font-weight: 750;
+margin: 15px ;
+}
+
+.history img {
+
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+    flex-direction: row;
+    }
+
+.histop {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+width: 80%;
+margin-bottom: 450px;
+}
+
+.histon {
+display: flex;
+width: 80%;
+align-items: flex-end;
+justify-content: center;
+}
+    
+
+.credits {
+    background: url(images/fons.jpg);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 600 ;
+}
+
+.credi {
+    flex-direction:column;
+
+}
+
+/*Для игр*/
+
+
+
+
+
+.games {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:space-around;
+width: 100%;
+height: 100vh;
+font-weight: 600;
+}
+.game1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+    }
+.game2 {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+
+}
+
+.game3 {
+display: none;
+width: 100%;
+align-items: center;
+justify-content: center;
+height: 500px;
+}
+
+.game4 {
+    display: none;
+    flex-direction: column;
+    width: 972px;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    }
+    
+
+
+    
+.gamesmenu {
+display: flex;
+width: 972px;
+justify-content: space-around;
+}
+
+.gamesmenu input {
+width: 19%;
+height: 40px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size:large;
+font-weight: 700;
+}
+/*Стили для игры dino начало*/
+.dinogame {
+display: flex;
+width: 972px;
+height: 300px;
+}
+
+.dinoinfo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    width: 600px;
+    max-width: 800px;
+    margin-left: 35px;
+    min-width: 600px;
+}
+
+/*Стили для игры dino end*/
+
+/*Стили для игры Больше-Меньше начало*/
+.randnum {
+max-width: 256px;
+
+}
+
+.randnum input, .pixelgameinfo input, .tiktakinfo input {
+    width: 256px;
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    padding: 2px;
+    justify-content:space-between;
+}
+
+.randnuminfo input {
+    width: 256px;
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+.randnuminfo, .pixelgameinfo, .tiktakinfo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    width: 600px;
+    max-width: 800px;
+    margin-left: 35px;
+    min-width: 600px;
+}
+ 
+
+.randnum input[type='number'] {
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+#randIn, #randAns {
+visibility: hidden;
+}
+
+/*Стили для игры Больше-Меньше конец*/
+
+/*Стили для игры PixelArt начало*/
+
+.pixelgame {
+    margin-left: 65px;
+    height: 352px;
+    max-width: 352px;
+    min-width: 352px;
+}
+
+button {
+height: 20px;
+width: 20px;
+margin: 1px;
+border: solid;
+border-width: 1px;
+border-radius: 4px;
+}
+
+
+
+/*Стили для игры PixelArt конец*/
+
+/*Стили для игры tiktak начало*/
+.tiktak {
+display: flex;
+min-width: 352px;
+width: 352px ;
+height: 352px;
+flex-wrap: wrap;
+align-items: center ;
+justify-content: space-between;
+}
+.cell {
+height: 110px;
+width: 110px;
+border-radius: 5px;
+border-style: solid;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 50pt;
+}
+/*Стили для игры tiktak конец*/
+
+footer {
+    background-color: burlywood;
+    height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 4px #222;
+    position: fixed;
+    bottom: -10px;
+    left: 1vw ;
+    right: 1vw;
+    padding-bottom: 10px;
+
+
+}
+
+footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: 450;
+    margin-left: 20px;
+}
+
+
+
+
