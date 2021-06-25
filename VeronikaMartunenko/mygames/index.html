@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyGames</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   <script type="text/javascript">
+        $(document).ready(function(){
+           $("#menu").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 1500);
+           });
+       });
+   </script>
+   <script type="text/javascript"></script>
+    $(document).ready(function(){
+       $("#menu").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 500);
+       });
+   });
+  </script>
+  <script src="scripts.js">  
+  </script>
+  <header> 
+    <div class="logo">
+     <p> <a href="index.html"> <img src="images/logo.svg" alt="logo"></a></p>
+      <p> <a href="index.html"> MyGame1</a></p>
+    </div>
+    <div class="menu" id="menu">
+      <p> <a href="#history">История</a></p>
+      <p> <a href="#games"> Игры</a></p>
+      <p> <a href="#credits">Об авторе</a></p>
+    </div>
+    <div class="social">
+     <p> <a href="https://vk.com" target="blank"> <img src="images/vk.png" alt="vk"></a></p>
+     <p> <a href="https://instagram.com" target="blank"> <img src="images/instagram.png" alt="instagram"></a></p>
+    </div>
+  </header>
+  <div class="content">
+    <div id="history" class="history">
+        <p >history</p>
+
+    </div>
+    <!--ИГРЫ-->
+    <div id="games" class="games">
+      <div class="gamesmenu">
+        <input class="button" type="button" value="Pixel Game" id = "btnGame1" onclick="displaygame1()">
+        <input class="button" type="button" value="Больше-меньше" id = "btnGame2" onclick="displaygame2()">
+        <input class="button" type="button" value="Крестики нолики" id = "btnGame3" onclick="displaygame3()">
+        <input class="button" type="button" value="Динозавр Google" id = "btnGame4" onclick="displaygame4()">
+      </div>
+      <!--первая игра-->
+      <div class="game1" id="game1">
+          <div id= "pixelgame" class="pixelgame">
+          </div>
+         <div class="pixelgameinfo">
+           <h2>Игра "Pixel Game"</h2>
+           <p>Это простая игра даёт возможность попрактиковаться в пиксель-арте (современное направление графики).Выбор случайного цвета вносит харрактер хаотичности .Для того, чтобы начать рисовать просто кликайте по полю с квадратиками слевой или правой кнопками мыши.</p>
+           <input type="button" value="очистить поле" onclick = "clearField()">
+          </div>
+       </div>
+      <!--первая игра-->
+    <!--Вторая игра-->
+    <div class="game2" id="game2">
+      <div class="randnumb">
+        <p><img src="images/robotic.png" alt="лого игры больше-меньше"></p>
+        <p><input type="text" id="randOut" disabled  value=" Нажми начать игру"></p>
+        <p><input type="text" id="randIn"></p>
+        <p ><input type="button" value="Ответить" id="rendAnswer" onclick="ancwerRandNumb()"> </p>
+      </div>
+      <div class="randnumbinfo">
+        <h2>Игра "Больше-меньше"</h2>
+        <p >Компьютер загадывает 2-х значное число (цифры могут повторяться). Ваша задача угадать это число. Если цифра присутствует в загаданном числе, и она стоит на том месте, то компьютер обозначает такую цифру буквой "В". Если цифра присутствует, но она стоит не на том месте, то компьютер обозначает ее буквой "K". Ваша задача угадать загаданное число за наименьшее число ходов.
+          Цель игры - развить логическое мышление и умение анализировать ситуацию. </p>
+        <p><input type="button" value="Начать игру" id="randStart"  onclick="beginRandNumb()"></p>
+      </div>
+    </div>
+    <!--Вторая игра-->
+     <!--Третья игра-->
+    <div class="game3" id="game3">
+      <div class="tictac">
+        <input type="button" class="cell" id="cell1" onclick="tap(this)">
+        <input type="button" class="cell" id="cell2" onclick="tap(this)">
+        <input type="button" class="cell" id="cell3" onclick="tap(this)">
+        <input type="button" class="cell" id="cell4" onclick="tap(this)">
+        <input type="button" class="cell" id="cell5" onclick="tap(this)">
+        <input type="button" class="cell" id="cell6" onclick="tap(this)">
+        <input type="button" class="cell" id="cell7" onclick="tap(this)">
+        <input type="button" class="cell" id="cell8" onclick="tap(this)">
+        <input type="button" class="cell" id="cell9" onclick="tap(this)">
+      </div>
+      <div class="tictacinfo">
+        <h2>Игра "Крестики нолики"</h2>
+        <p >Кре́стики-но́лики — логическая игра между двумя противниками на квадратном поле 3 на 3 клетки или бо́льшего размера (вплоть до «бесконечного поля»). Один из игроков играет «крестиками», второй — «ноликами». В традиционной китайской игре (Гомоку) используются чёрные и белые камни.<p>
+        <p><input type="button" value="Начать игру" id="tictacStart"  onclick="begintictac()"></p>
+        <p><input type="button" value="" id="tictacprogress"  disabled></p>
+      </div>
+    </div>
+    <!--Третья игра-->
+    <!--Четвёртая игра-->
+    <div class="game4" id="game4">
+      <div class="dinoinfo">
+        <h2>Динозаврик Google</h2>
+        <p>Игра — бесконечная «бегалка», в которой динозавру нужно помогать уворачиваться от возникающих на его пути препятствий. Пользователь может нажимать на «прыжок» или «приседать», а бег начинается автоматически. Задача — набрать как можно больше очков (они насчитываются за время в игре).</p>
+      </div>
+      <div class="dinogame">
+        <canvas id="canvas" width="972" height="300"></canvas>
+        <script src="dinojs.js"></script>
+      </div>
+   </div>
+   <!--Четвёртая игра-->
+    <!--ИГРЫ-->
+  </div>  
+  <div id="credits" class="credits">
+    <p> Здесь будет информация об авторе...</p>
+  </div>
+</div>
+  <footer>
+    <p class="">Veronika</p>
+    <p>Гомель 2021</p>
+    <p> <a href="mailtoValeryKlyuka@gmail.com" target="blank">MartunenkoVeronika@gmail.com</a></p>
+  </footer>
+</body>
+</html>
