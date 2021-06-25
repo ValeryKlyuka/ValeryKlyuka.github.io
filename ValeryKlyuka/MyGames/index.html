@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGames</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#menu").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 1500);
+           });
+       });
+    </script>
+    <script src="scripts.js"></script>
+    <header>
+        <div class="logo">
+            <p><a href="index.html"><img src="images/logo.svg" alt="logo"></a></p>
+            <p><a href="index.html">My Game</a></p>
+        </div>
+        <div id="menu" class="menu">
+            <p><a href="#history">История</a></p>
+            <p><a href="#games">Игры</a></p>
+            <p><a href="#credits">Об авторе</a></p> 
+        </div>
+        <div class="social">
+            <p><a href="https://vk.com/valeryklyuka" target="_blank"><img src="images/vk.png" alt="vk"></a></p>
+            <p><a href="https://www.instagram.com/valeryklyuka" target="_blank"><img src="images/instagram.png" alt="instagram"></a></p>
+        </div>
+    </header>
+    
+    <div class="content">
+        <div id="history" class="history">
+            <div class="history1">
+                <img src="images/hist1.png" alt="иконка определения">
+                <p>Браузерная игра - это игра, в которую вы сможете играть из обычного интернет-браузера. Например, из Internet Explorer, FireFox или Opera. Как правило, для таких игр не требуется установка дополнительного программного обеспечения, а браузер уже входит в состав операционной системы. Это неоспоримое преимущество позволяет начать играть сразу и практически на любом компьютере.</p>
+            </div>
+            <div class=history2>
+                <img src="images/hist2.png" alt="первая браузерная игра">
+                <p>Первая многопользовательская браузерная игра появилась в 1999 году. В ноябре того года состоялось открытие первой версии многопользовательской игры, которая работала в браузере. Игра была написана на языке Perl, на котором в то время работали многие сайты в интернете. Эта игра в то время позиционировалась как "браузерный MUD", но в действительности не была MUDом, а была текстовой браузерной игрой (игра вообще не работала по telnet, а работала только в браузере). Она имела фреймовый интерфейс (в одном фрейме текстовое описание места и иллюстрация, в других: чат, список игроков и персонаж) и работала во всех стандартных браузерах того времени. Это дало ощутимые преимущества - браузерный интерфейс позволял использовать мышь и просто кликать по ссылкам, а не набирать текстом команды. Таким образом, управление персонажем существенно упростилось. Кроме того, игра стала доступнее, так как не все знали, как пользоваться Телнетом. Спустя два года, в 2001 году, игра была закрыта на доработку, которая продолжалась до 2003 года. </p>
+            </div>
+        </div>
+        <div id="games" class="games">
+            <div class="gamesmenu">
+                <input type="button" value="Pixel Game" id="btnGame1" onclick="displaygame1()">
+                <input type="button" value="Больше-меньше" id="btnGame2" onclick="displaygame2()">
+                <input type="button" value="Крестики-нолики" id="btnGame3" onclick="displaygame3()">
+                <input type="button" value="Динозавр Google" id="btnGame4" onclick="displaygame4()">
+            </div>
+            <!--Первая игра-->
+            <div class="game1" id="game1">
+                <div id="pixelgame" class="pixelgame">
+                </div>
+                <div class="pixelgameinfo">
+                    <h2>Игра "Pixel Game"</h2>
+                    <p>Это простая игра даёт возможность попрактиковаться в пиксель-арте (современное направление графики).
+                        Выбор случайного цвета вносит харрактер хаотичности. Для того, чтобы начать рисовать просто кликайте по
+                        полю с квадратиками левой или правой кнопками мыши!</p>
+                    <input type="button" value="Очистить поле" onclick="clearField()">
+                </div>
+            </div>
+            <!--Первая игра-->
+            <!--Вторая игра-->
+            <div class="game2" id="game2">
+                <div class="randnumb">
+                    <p><img src="images/logorandnumb.png" alt="лого игры больше-меньше"></p>
+                    <p><input type="button" id="randOut" disabled></p>
+                    <p><input type="number" id="randIn"></p>
+                    <p><input type="button" value="Ответить" id="randAnswer" onclick="answerRandNumb()"></p>
+                </div>
+                <div class="randnumbinfo">
+                    <h2>Игра "Больше-меньше"</h2>
+                    <p>Компьютер загадывает 2-х значное число (цифры могут повторяться). Ваша задача угадать это число. Ваша задача угадать загаданное число за наименьшее число ходов. Цель игры - развить логическое мышление и умение анализировать ситуацию.</p>
+                    <p><input type="button" id="randStart" value="Начать игру" onclick="beginRandNumb()"></p>
+                </div>
+            </div>
+            <!--Вторая игра-->
+            <!--Третья игра-->
+            <div class="game3" id="game3">
+                <div class="tictac">
+                    <input type="button" class="cell" id="cell1" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell2" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell3" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell4" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell5" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell6" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell7" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell8" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell9" onclick="tap(this)">
+                </div>
+                <div class="tictacinfo">
+                    <h2>Игра "Крестики-нолики"</h2>
+                    <p>Логическая игра между двумя противниками на квадратном поле 3 на 3 клетки или бо́льшего размера (вплоть до «бесконечного поля»). Один из игроков играет «крестиками», второй — «ноликами». В традиционной китайской игре (Гомоку) используются чёрные и белые камни.</p>
+                    <p><input type="button" id="tictacStart" value="Начать игру" onclick="begintictac()"></p>
+                    <p><input type="button" value="" id="tictacprogress" disabled></p>
+                </div>
+            </div>
+            <!--Третья игра-->
+            <!--Четвёртая игра-->
+            <div class="game4" id="game4">
+                <div class="dinoinfo">
+                    <h2>Игра "Динозаврик Google"</h2>
+                    <p>Игра — бесконечная «бегалка», в которой динозавру нужно помогать уворачиваться от возникающих на его пути препятствий. Пользователь может нажимать на «прыжок» или «приседать», а бег начинается автоматически. Задача — набрать как можно больше очков (они насчитываются за время в игре). Чтобы начать игру, нажмите любую клавишу... 
+                    </p>
+                </div>
+                <div class="dinogame">
+                    <canvas id="canvas" width="972" height="300"></canvas>
+                    <script src="dinojs.js"></script>
+                </div>
+            </div>
+            <!--Четвёртая игра-->
+        </div>
+        <div  id="credits" class="credits">
+            <img src="images/avatar.png" alt="аватар разработчика">
+            <div class="info">
+                <h1>Клюка Валерий Игоревич</h1>
+                <p>
+                    Преподаватель курса разработки браузерных игр на html, css и javascript
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Клюка Валерий</p>
+        <p>Гомель 2021</p>
+        <p><a href="mailto:ValeryKlyuka@gmail.com">ValeryKlyuka@gmail.com</a></p>
+    </footer>
+</body>
+</html>
