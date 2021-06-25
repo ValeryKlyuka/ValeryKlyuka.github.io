@@ -1,0 +1,12 @@
+img { 
+    width: 20%;
+    border: 5px;
+    border-style: dotted;
+    border-color: blue;
+    margin-left: 50px;
+}
+ .content   {
+    color: brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}

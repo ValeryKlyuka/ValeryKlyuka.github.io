@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Launcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#menu").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 1500);
+           });
+       });
+    </script>
+    <script src="scripts.js"></script>
+    </script>
+   <header>
+       <div class="logo">
+       <p> <a href="#"><img src="images/logo.svg" alt=""></a></p>
+       <p> <a href="#"> Game Launcher </a></p>
+       </div>
+       <div id="menu" class=menu>
+        <p> <a href="#games"> Игры</a></p>
+        <p> <a href="#history">История</a></p>
+        <p><a href="#credits"> Об авторе</a></p>
+    </div>
+    <div class="social">
+        <p><a href="https://vk.com/"><img src="images/p.png" alt="vk"></a></p>
+        <p><a href="https://www.instagram.com/?hl=ru"><img src="images/instagram.png" alt="instagram"></a></p>
+    </div>
+   </header> 
+
+    <div class="content">
+        <div class="history" id="history">  
+            <p>Браузерная игра - это игра, в которую вы сможете играть из обычного интернет-браузера. Например, из Internet Explorer, FireFox или Opera. Как правило, для таких игр не требуется установка дополнительного программного обеспечения, а браузер уже входит в состав операционной системы. Это неоспоримое преимущество позволяет начать играть сразу и практически на любом компьютере.</p>
+            <p><a href="https://playtictactoe.org/"><img src="images/play.png" alt=""></a></p>
+        </div>
+        <div class="games" id="games">
+            <div class="gamesmenu">
+                <input type="button" value="Pixel Game" id="btnGame1" onclick="displaygame1()">
+                <input type="button" value="Больше-меньше" id="btnGame2" onclick="displaygame2()">
+                <input type="button" value="Крестики-нолики" id="btnGame3" onclick="displaygame3()">
+                <input type="button" value="Динозавр Google" id="btnGame4" onclick="displaygame4()">
+            </div>
+            <!--Первая игра-->
+            <div class="game1" id="game1">  
+                <div id="pixelgame" class="pixelgames">
+                    
+                </div>
+                <div class="pixelgamesinfo">
+                    <h2>Игра "Pixel Game"</h2>
+                    <p>Это простая игра даёт возможность попрактиковаться в пиксель-арте (современное направление графики).
+                    Выбор случайного цвета вносит харрактер хаотичности. Для того, чтобы начать рисовать просто кликайте по
+                    полю с квадратиками левой или правой кнопками мыши!</p>
+                    <input type="button" value="Очистить поле" onclick="clearField()">
+                </div>
+            </div>
+            <!--Первая игра-->
+            <!--Вторая игра-->
+            <div class="game2" id="game2">
+                <div class="randnumb">
+                    <p><img src="images/g.png" alt="лого игры больше-меньше"></p>
+                    <p><input type="button" id="randOut" disabled></p>
+                    <p><input type="number" id="randIn"></p>
+                    <p><input type="button" value="Ответить" id="randAnswer" onclick="answerRandNumb()"></p>
+                </div>
+                <div class="randnumbinfo">
+                    <h2>Игра "Больше-меньше"</h2>
+                    <p> Компьютер загадывает 2-х значное число (цифры могут повторяться). Ваша задача угадать это число. Если цифра присутствует в загаданном числе, и она стоит на том месте, то компьютер обозначает такую цифру буквой "В". Если цифра присутствует, но она стоит не на том месте, то компьютер обозначает ее буквой "K". Ваша задача угадать загаданное число за наименьшее число ходов.
+                    Цель игры - развить логическое мышление и умение анализировать ситуацию</p>
+                    <p><input type="button" id="randStart" value="Начать игру" onclick="beginRandNumb()"></p>
+                </div>
+            </div>
+        <!--Вторая игра-->
+            <!--Третья игра-->
+            <div id="game3" class="game3">
+                <div class="tictac">
+                    <input type="button" class="cell" id="cell1" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell2" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell3" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell4" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell5" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell6" onclick="tap(this)">
+                    <input type="button" class= "cell" id="cell7" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell8" onclick="tap(this)">
+                    <input type="button" class="cell" id="cell9" onclick="tap(this)">
+                </div>
+                <div class="tictacinfo">
+                    <h2>Игра "Крестики-нолики"</h2>
+                    <p>логическая игра между двумя противниками на квадратном поле 3 на 3 клетки или бо́льшего размера (вплоть до «бесконечного поля»). ... Один из игроков играет «крестиками», второй — «ноликами». В традиционной китайской игре (Гомоку) используются чёрные и белые камни.</p> 
+                    <p><input type="button" id="tictacStart" value="Начать игру" onclick="begintictac()"></p>
+                    <p><input type="button" value="" id="tictacprogress" disabled></p>
+                </div>
+            </div>
+                <!--Третья игра-->
+                <!--Четвертая игра-->
+                <div class="game4" id="game4">
+                    <div class="dinoinfo">
+                        <h2>Игра "Динозаврик"</h2>
+                        <p>Игра — бесконечная «бегалка», в которой динозавру нужно помогать уворачиваться от возникающих на его
+                        </p>
+                    </div>
+                <div class="dinogame">
+                    <canvas id="canvas" width="972" height="300"></canvas>
+                    <script src="dinojs.js"></script>
+
+                </div>
+                </div> 
+        </div>
+
+        <div id="credits" class="credits">
+            <p>Сайт создавался Самусевым Никитой ,на сайт было уделено 2 недели </p>
+            <p><a href="mailto:samusev.nikitka@gmail.com">
+            <img src="images/b.png" alt="Разработчик"></a></p>
+        </div>
+    </div>
+   <footer>
+       <p>Никита Самусев</p>
+       <p>Гомель 2021</p>
+       <p> <a href="mailto:samusev.nikitka@gmail.com">samusev.nikitka@gmail.com</a> </p>
+   </footer> 
+</body>
+</html>
