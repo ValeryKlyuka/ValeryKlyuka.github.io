@@ -1,0 +1,307 @@
+header {
+  background-color: rgb(103, 103, 233);
+  height: 60px;
+  top: -10px;
+  left: 1vw;
+  right:  1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 2px #222;
+  position: fixed;
+  padding-top: 10px;
+}
+.content {
+  height: 280vh;
+  width: 98vw;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0,5w;
+  margin-right: 0,5vw;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7WV7SIBSE1_jHsR09lEIJ0DdicNOunbczmw&usqp=CAU");
+}
+.history {
+  background-color:none;
+  display: flex;
+  width: 100%;
+  height: 80vw;
+  align-items: center;
+  justify-content:space-around;
+}
+.games {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vw;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.game1 {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+  align-items:flex-start;
+  height: 70vh;
+  min-width: 800px;
+  margin-top: 150px;
+}
+ .game2 {
+  margin-top: 150px;
+  display: none;
+  justify-content: center;
+  width: 60vw;
+  align-items:flex-start;
+  height: 60vh;
+  min-width: 800px;
+}
+.game3 {
+  display: none;
+  justify-content: center;
+  width: 60vw;
+  align-items:flex-start;
+  height: 60vh;
+  min-width: 800px;
+  margin-top: 150px;
+}
+.game4 {
+  display: none;
+  justify-content: center;
+  width: 60vw;
+  align-items:center;
+  height: 60vh;
+  flex-direction: column;
+  margin-top: 150px;
+}
+.tictac {
+  display: flex;
+  height: 352px;
+  width: 352px;
+  max-width: 352px;
+  min-width: 352px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.cell {
+  height: 110px;
+  width: 110px;
+  margin-left: 6px;
+  border-radius: 10px;
+  border-style: solid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 54pt;
+
+}
+
+footer {
+  display: flex;
+  background-color: rgb(103, 103, 233);
+  height: 60px;
+  left: 1vw;
+  right:  1vw;
+  justify-content:space-around;
+  border-radius: 10px;
+  box-shadow: 0 -2px 2px 2px #222;
+  bottom: -10px;
+  position: fixed;
+  padding-bottom: 10px;
+}
+.randnumbinfo h2, .pixelgameinfo h2, .tictacinfo h2, .trexinfo h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ .randnumbinfo input{
+  width: 256px;
+  height: 25px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+}
+.randnumbinfo p, .tictacinfo p, .pixelgameinfo p, .randnumb p, .trexinfo p, .game1 p, .history p, .credits p {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 11pt;
+}
+.randnumb input, .pixelgameinfo input, .tictacinfo input{
+  width: 256px;
+  height: 25px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10pt;
+}
+
+.randnumbinfo, .pixelgameinfo, .tictacinfo {
+  width: 600px;
+  margin-left: 20px;
+}
+.randnumb input[type="text"], .tictacinfo input[type="text"] {
+  border: 0;
+  padding: 0;
+  text-align: center;
+  background-color: white;
+}
+#randIn, #randanswer {
+  visibility: hidden;
+}
+.randnumb {
+  width: 352px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.pixelgame {
+  width: 352px;
+  max-width: 352px;
+  min-width: 352px;
+  height: 352px;
+}
+footer p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  left: 4px;
+  font-size: large;
+  font-weight: 400;
+}
+.logo {
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 80%;
+  width: 20%;
+  min-width: 145px;
+  max-width: 160px;
+  justify-self: left;
+  margin-left: 4px;
+}
+.menu {
+    min-width: 230px;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    flex-grow: 1;
+}
+.social {
+  display: flex;
+  align-items: center;
+  height: 80%;
+}
+.logo p img{
+  height: 50px;
+}
+.logo p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 4px;
+  font-size: large;
+  font-weight: 1000;
+}
+.menu p a, footer p a, .logo p a, .dinogame p a {
+  color: #222;
+  text-decoration:none;
+  transition: all 100ms ease-in;
+}
+.menu a:hover, footer p a:hover {
+  color: rgb(156, 77, 209);
+  background-color: cyan;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 100ms ease-in;
+}
+.menu p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 4px;
+  font-size: large;
+  font-weight: 400;
+}
+.social p img {
+  height: 42px;
+  width: 42px;
+  margin-right: 10px;
+  align-items: center;
+}
+button {
+  height: 20px;
+  width: 20px;
+  margin: 1px;
+  border:solid;
+  border-width: 0.1px;
+  border-radius: 4px;
+}
+.pixelgame{ 
+  height: 352px;
+  width: 352px;
+}
+.gamesmenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 972px;
+  margin-top: 100px;
+}
+.gamesmenu input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 11pt;
+  width: 18%;
+  height: 24px;
+}
+.gamesmenu input:hover, .pixelgameinfo input:hover, .randnumbinfo input[type="button"]:hover, .tictacinfo input[type="button"]:hover{
+  color:white;
+  background: #222;
+  transition: all 100ms ease-in;
+}
+.gamesmenu input, .pixelgameinfo input, .randnumbinfo input[type="button"], .tictacinfo input[type="button"]{
+  background: white;
+  color: #222;
+  transition: all 150ms ease-out;
+  border-width: 1px;
+}
+.dinogame {
+  display: flex;
+  width: 972px;
+  height: 300px;
+  align-items: center;
+  flex-direction: column;
+}
+.trexinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 972px;
+  height: 100px;
+  margin-top: -200px;
+}
+.dinogame a {
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+}
+.pustota {
+  margin-left: 0,5vw;
+  margin-right: 0,5vw;
+  height: 20px;
+  background-color: white;
+  width: 98vw;
+}
+.info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 11pt;
+  margin-right: 2vw;
+  min-width: 768px;
+}
+.credits{
+  background-color:none;
+  display: flex;
+  width: 100%;
+  height: 80vw;
+  align-items: center;
+  justify-content:space-around;
+  flex-grow: 1;
+
+}
+.credits p img, .history p {
+  margin-left: 2vw;
+}
+
+
+
+
